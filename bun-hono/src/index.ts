@@ -14,6 +14,7 @@ app.get("/", (c) => {
 // app.use("*", serveStatic({ root: "./frontend/dist" }));
 // app.get("*", serveStatic({ path: "./frontend/dist/index.html" }));
 
-app.route("/api/expenses", expensesRoute);
+const apiRoutes = app.basePath("/api").route("/expenses", expensesRoute);
 
 export default app;
+export type ApiRoutes = typeof apiRoutes;

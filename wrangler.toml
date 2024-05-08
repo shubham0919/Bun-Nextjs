@@ -1,4 +1,4 @@
-name = "bun-hono"
+name = "bun-backend"
 compatibility_date = "2023-12-01"
 
 # [vars]
@@ -19,6 +19,3 @@ compatibility_date = "2023-12-01"
 
 # [ai]
 # binding = "AI"
-
-[placement]
-mode = "smart"
