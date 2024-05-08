@@ -7,7 +7,7 @@
     "dev": "bunx --bun vite",
     "build": "babel src -d dist",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "deploy:dev": "git pull && yarn && tsc && react-scripts build && CLOUDFLARE_ACCOUNT_ID=0eac5cb168a1a3fed6b2fd52d9e722cc npx wrangler pages deploy --project-name builder-sp build --branch master --commit-dirty=true",
+    "deploy:dev": "bun run build && CLOUDFLARE_ACCOUNT_ID=df7d841212eb25027c2bbd23ee88d01f npx wrangler pages deploy --project-name bun-nextjs dist --branch main --commit-dirty=true",
     "preview": "vite preview"
   },
   "dependencies": {

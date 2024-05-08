@@ -13,7 +13,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "http://localhost:3000",
+        target: "https://bun-hono.sonwaneshubham049.workers.dev",
         changeOrigin: true,
       },
     },
