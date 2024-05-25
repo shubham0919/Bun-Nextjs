@@ -1,6 +1,7 @@
 import { zValidator } from "@hono/zod-validator";
 import { Hono } from "hono";
 import { z } from "zod";
+import { v4 as uuidv4 } from "uuid";
 type Expense = {
   id?: number;
   title: string;
@@ -36,6 +37,7 @@ const createPostSchema = expenseSchema.omit({ id: true });
 
 export const expensesRoute = new Hono()
   .get("/", async (c) => {
+    console.log("New UUID:", uuidv4())
     return c.json({ expenses: fakeExpenses });
   })
   .post("/", zValidator("json", createPostSchema), async (c) => {

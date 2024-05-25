@@ -7,9 +7,9 @@ const app = new Hono();
 
 app.use("*", logger());
 
-app.get("/", (c) => {
-  return c.text("Hello Hono!");
-});
+// app.get("/", (c) => {
+//   return c.text("Hello Hono!");
+// });
 
 // app.use("*", serveStatic({ root: "./frontend/dist" }));
 // app.get("*", serveStatic({ path: "./frontend/dist/index.html" }));
